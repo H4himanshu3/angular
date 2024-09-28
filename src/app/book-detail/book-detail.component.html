@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+    <span>{{ book?.title }}</span>
+  </mat-toolbar>
+  
+  <div class="book-detail-container" *ngIf="book">
+    <mat-card class="book-detail-card">
+      <div class="book-image-section">
+        <img mat-card-image [src]="book.image" alt="{{ book.title }} cover">
+      </div>
+      
+      <div class="book-info-section">
+        <mat-card-title>{{ book.title }}</mat-card-title>
+        <mat-card-subtitle>by {{ book.author }}</mat-card-subtitle>
+  
+        <mat-divider></mat-divider>
+  
+        <mat-card-content>
+          <p class="book-description">{{ book.description }}</p>
+        </mat-card-content>
+  
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Add to Cart</button>
+          <button mat-stroked-button color="accent">Add to Wishlist</button>
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </div>
+  
+  <div class="no-book" *ngIf="!book">
+    <mat-card>
+      <mat-card-title>Book Not Found</mat-card-title>
+      <mat-card-content>
+        <p>We couldn't find the book you're looking for. Please check the list of available books and try again.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/books">Back to Books</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

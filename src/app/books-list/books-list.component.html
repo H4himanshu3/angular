@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <span>Book List</span>
+</mat-toolbar>
+
+<div class="book-list-container">
+  <mat-grid-list cols="3" rowHeight="400px" gutterSize="16px">
+    <mat-grid-tile *ngFor="let book of books">
+      <mat-card class="book-card">
+        <mat-card-header>
+          <div mat-card-avatar class="book-avatar">
+            <mat-icon>book</mat-icon>
+          </div>
+          <mat-card-title>{{ book.title }}</mat-card-title>
+          <mat-card-subtitle>{{ book.author }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="book.image" alt="{{ book.title }} cover">
+        <mat-card-content>
+          <p>{{ book.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" [routerLink]="['/book', book.id]">View Details</button>
+          <button mat-stroked-button color="accent">Add to Wishlist</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

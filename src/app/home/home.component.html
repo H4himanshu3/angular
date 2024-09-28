@@ -1,0 +1,50 @@
+<mat-toolbar color="primary">
+    <span>Welcome to the Book Store</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/books" color="accent">Browse Books</button>
+  </mat-toolbar>
+  
+  <div class="home-container">
+    <mat-card class="home-card">
+      <mat-card-header>
+        <div mat-card-avatar class="book-icon">
+          <mat-icon>library_books</mat-icon>
+        </div>
+        <mat-card-title>Explore Our Collection</mat-card-title>
+        <mat-card-subtitle>Discover the best books across different genres</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Welcome to our online bookstore! Whether you're looking for the latest bestsellers, timeless classics, or educational books, we've got something for every reader.</p>
+        <p>Click below to explore our curated selection of books and enjoy a seamless shopping experience.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/books">Start Browsing</button>
+      </mat-card-actions>
+    </mat-card>
+  
+    <mat-grid-list cols="2" rowHeight="300px" gutterSize="16px">
+      <mat-grid-tile>
+        <mat-card class="highlight-card">
+          <img mat-card-image src="" alt="Featured Book">
+          <mat-card-title>Featured Book</mat-card-title>
+          <mat-card-content>Discover the best book of the month, highly recommended by readers and critics alike.</mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="accent">Learn More</button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+  
+      <mat-grid-tile>
+        <mat-card class="highlight-card">
+          <img mat-card-image src="https://via.placeholder.com/300" alt="New Arrivals">
+          <mat-card-title>New Arrivals</mat-card-title>
+          <mat-card-content>Check out the latest additions to our store, fresh off the press!</mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="accent">See New Arrivals</button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  
+
